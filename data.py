@@ -1,5 +1,4 @@
 import torch 
-import tiktoken
 import os
 
 batch_size = 32  
@@ -32,3 +31,4 @@ def get_batch(split):
     y = torch.stack([data[i + 1:i + block_size + 1] for i in ix])
     x, y = x.to(device), y.to(device)
     return x, y
+
